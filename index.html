@@ -1,0 +1,1974 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auction part1</title>
+<link href="project/css/fontcss.css" rel="stylesheet">
+<link rel="stylesheet" href="project/font-awesome-4.7.0/css/font-awesome.min.css">
+<link href="project/jquery-ui.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="project/styles2.css">
+</head>
+
+<body>
+<div class="header">
+	<div class="bg-top clearfix">
+		<div class="container4K">
+			<div class="row1 clearfix">
+				<div class="orders">
+					<a href="#"><span class="fa fa-bars" baria-hidden="true"></span>orders</a>
+				</div>
+				<div class="files">
+					<a href="#"><span class="fa fa-file-text-o" baria-hidden="true"></span>files</a>
+				</div>
+				<div class="logout">
+					<a href="#"><span class="fa fa-sign-out" baria-hidden="true"></span>logout</a>
+				</div>
+				<div class="welcome">
+					<p><span>welcome</span> client-czar3@nameofcompany.com</p>
+				</div>	
+			</div>
+			<div class="row2 clearfix">
+				<div class="filters">
+					<div class="top_filters clearfix">
+						<div class="filter_date">
+							<p class="img-date"><i class="fa fa-calendar-check-o"></i></p>
+							<div class="select dropdown">  
+								<a href="#" class="dropdown-checkbox-toggle" data-toggle="dropdown" id="date_select">
+									<span class="">Choose Starting Air Date<span>
+									<span class="img-arrow"><i class="fa fa-angle-down"></i></span>								
+								</a>
+								<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
+									<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
+										<a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="Prev">
+											<p class="calendar"><span class="fa fa-angle-left" baria-hidden="true"></span></p>
+										</a>
+										<a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next">
+											<p class="calendar"><span class="fa fa-angle-right" baria-hidden="true"></span></p>
+										</a>
+										<div class="ui-datepicker-title">
+										<span class="ui-datepicker-month">July</span>&nbsp;
+										<span class="ui-datepicker-year">2017</span>
+										</div>
+									</div>
+									<table class="ui-datepicker-calendar">
+										<thead>
+											<tr>
+												<th scope="col" class="ui-datepicker-week-end">
+													<span title="Sunday">Su</span>
+												</th>
+												<th scope="col">
+													<span title="Monday">Mo</span>
+												</th>
+												<th scope="col">
+												<span title="Tuesday">Tu</span>
+												</th>
+												<th scope="col">
+													<span title="Wednesday">We</span>
+												</th>
+												<th scope="col">
+													<span title="Thursday">Th</span></th>
+												<th scope="col">
+													<span title="Friday">Fr</span>
+												</th>
+												<th scope="col" class="ui-datepicker-week-end">
+													<span title="Saturday">Sa</span>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+												</td>
+												<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+												</td>
+												<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+												</td>
+												<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+												</td>
+												<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+												</td>
+												<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+												</td>
+												<td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">1</span>
+												</td>
+											</tr>
+											<tr>
+												<td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled">
+													<span class="ui-state-default">2</span>
+												</td>
+												<td class=" ui-datepicker-days-cell-over " data-handler="selectDay" data-event="click" data-month="6" data-year="2017">
+													<a class="ui-state-default ui-state-hover" href="#">3</a>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">4</span>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">5</span>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">6</span>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">7</span>
+												</td>
+												<td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">8</span>
+												</td>
+											</tr>
+											<tr>
+												<td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">9</span>
+												</td>
+												<td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2017">
+													<a class="ui-state-default" href="#">10</a>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">11</span>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">12</span>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">13</span>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span>
+												</td>
+												<td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">15</span>
+												</td>
+											</tr>
+											<tr>
+												<td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">16</span>
+												</td>
+												<td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2017">
+													<a class="ui-state-default" href="#">17</a>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">18</span>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">19</span>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">20</span>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">21</span>
+												</td>
+												<td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">22</span>
+												</td>
+											</tr>
+											<tr>
+												<td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">23</span>
+												</td>
+												<td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2017">
+													<a class="ui-state-default" href="#">24</a>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">25</span>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">26</span>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">27</span>
+												</td>
+												<td class=" ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">28</span>
+												</td>
+												<td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">29</span>
+												</td>
+											</tr>
+											<tr>
+												<td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled ">
+													<span class="ui-state-default">30</span>
+												</td>
+												<td class=" " data-handler="selectDay" data-event="click" data-month="6" data-year="2017">
+													<a class="ui-state-default" href="#">31</a>
+												</td>
+												<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+												</td>
+												<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+												</td>
+												<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+												</td>
+												<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+												</td>
+												<td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>	
+							</div>
+						</div>
+						<div class="filter_markets dropdown-checkbox">
+							<p class="img-map"><span class="fa fa-map" baria-hidden="true"></span></p>
+							<div class="select dropdown">
+								<a href="#" class="dropdown-checkbox-toggle" data-toggle="dropdown" id="market_select">
+									<span class="">Choose Market</span>
+									<span class="dropdown-checkbox-nbselected"></span>
+									<span class="img-arrow"><i class="fa fa-angle-down"></i></span>
+								</a>
+								<div class="dropdown-checkbox-content">      
+									<div class="dropdown-checkbox-header clearfix">        
+										<input class="checkbox-all" type="checkbox" id="123">
+										<label for="123"><span class="square"><span class="fa fa-check check-square"></span></span>Click for National</label>
+										<input type="text" placeholder="Search" class="search">      
+									</div>
+									<ul class="dropdown-checkbox-menu">
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="184590679194.20282">
+												<label for="184590679194.20282"><span class="square"><span class="fa fa-check check-square"></span></span>Aberdeen WA</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="953203033517.3218">
+												<label for="953203033517.3218"><span class="square"><span class="fa fa-check check-square"></span></span>Abilene TX</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="442702022980.8237">
+												<label for="442702022980.8237"><span class="square"><span class="fa fa-check check-square"></span></span>Akron OH</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="258335777035.40155">
+												<label for="258335777035.40155"><span class="square"><span class="fa fa-check check-square"></span></span>Albany</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="950497915805.9698">
+												<label for="950497915805.9698"><span class="square"><span class="fa fa-check check-square"></span></span>Albany GA</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="789789213836.3038">
+												<label for="789789213836.3038"><span class="square"><span class="fa fa-check check-square"></span></span>Albany-Schenectady-Troy</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1336496257285.5889">
+												<label for="1336496257285.5889"><span class="square"><span class="fa fa-check check-square"></span></span>Albany-Schenectady-Troy NY</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1301004870192.6147">
+												<label for="1301004870192.6147"><span class="square"><span class="fa fa-check check-square"></span></span>Albuquerque NM</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="719149246836.3033">
+												<label for="719149246836.3033"><span class="square"><span class="fa fa-check check-square"></span></span>Albuquerque-Santa Fe</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="501480693515.8158">
+												<label for="501480693515.8158"><span class="square"><span class="fa fa-check check-square"></span></span>Albuquerque-Santa Fe</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="663741154547.677">
+												<label for="663741154547.677"><span class="square"><span class="fa fa-check check-square"></span></span>Allentown-Bethlehem PA</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="79276511765.14494">
+												<label for="79276511765.14494"><span class="square"><span class="fa fa-check check-square"></span></span>Amarillo</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1039416249610.3503">
+												<label for="1039416249610.3503"><span class="square"><span class="fa fa-check check-square"></span></span>Amarillo TX</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="230582523918.77515">
+												<label for="230582523918.77515"><span class="square"><span class="fa fa-check check-square"></span></span>Anchorage</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="898736038642.2067">
+												<label for="898736038642.2067"><span class="square"><span class="fa fa-check check-square"></span></span>Anchorage AK</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="374915693963.3864">
+												<label for="374915693963.3864"><span class="square"><span class="fa fa-check check-square"></span></span>Appleton-Oshkosh WI</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="675161607399.5615">
+												<label for="675161607399.5615"><span class="square"><span class="fa fa-check check-square"></span></span>Asheville NC</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1485339931483.397">
+												<label for="1485339931483.397"><span class="square"><span class="fa fa-check check-square"></span></span>Atlanta</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="624151467979.3583">
+												<label for="624151467979.3583"><span class="square"><span class="fa fa-check check-square"></span></span>Atlanta GA</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="760876106896.6353">
+												<label for="760876106896.6353"><span class="square"><span class="fa fa-check check-square"></span></span>Atlantic City-Cape May NJ</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1149489252159.377">
+												<label for="1149489252159.377"><span class="square"><span class="fa fa-check check-square"></span></span>Augusta GA</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="564315832547.2864">
+												<label for="564315832547.2864"><span class="square"><span class="fa fa-check check-square"></span></span>Augusta-Aiken</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="116338706953.87042">
+												<label for="116338706953.87042"><span class="square"><span class="fa fa-check check-square"></span></span>Austin</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="956997315.7317315">
+												<label for="956997315.7317315"><span class="square"><span class="fa fa-check check-square"></span></span>Austin TX</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="382234731921.05505">
+												<label for="382234731921.05505"><span class="square"><span class="fa fa-check check-square"></span></span>Bakersfield</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="962373237684.8904">
+												<label for="962373237684.8904"><span class="square"><span class="fa fa-check check-square"></span></span>Bakersfield CA</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="138202452075.8331">
+												<label for="138202452075.8331"><span class="square"><span class="fa fa-check check-square"></span></span>Baltimore</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1365006049841.6353">
+												<label for="1365006049841.6353"><span class="square"><span class="fa fa-check check-square"></span></span>Baltimore MD</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="305439823557.54364">
+												<label for="305439823557.54364"><span class="square"><span class="fa fa-check check-square"></span></span>Bangor</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="773947815355.3507">
+												<label for="773947815355.3507"><span class="square"><span class="fa fa-check check-square"></span></span>Bangor ME</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="337925907552.1648">
+												<label for="337925907552.1648"><span class="square"><span class="fa fa-check check-square"></span></span>Baton Rouge</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="121795521084.52023">
+												<label for="121795521084.52023"><span class="square"><span class="fa fa-check check-square"></span></span>Baton Rouge LA</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="990951229742.2297">
+												<label for="990951229742.2297"><span class="square"><span class="fa fa-check check-square"></span></span>Beaumont-Port Arthur</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="32612649220.872837">
+												<label for="32612649220.872837"><span class="square"><span class="fa fa-check check-square"></span></span>Beaumont-Port Arthur TX</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="414857880208.6312">
+												<label for="414857880208.6312"><span class="square"><span class="fa fa-check check-square"></span></span>Bend</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+											<input type="checkbox" id="387572462679.3624">
+											<label for="387572462679.3624"><span class="square"><span class="fa fa-check check-square"></span></span>Bend OR</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1205182689278.8481">
+												<label for="1205182689278.8481"><span class="square"><span class="fa fa-check check-square"></span></span>Billings MT</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="964351545912.4567">
+												<label for="964351545912.4567"><span class="square"><span class="fa fa-check check-square"></span></span>Biloxi-Gulfport-Pascagoula MS</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="360542984192.48346">
+												<label for="360542984192.48346"><span class="square"><span class="fa fa-check check-square"></span></span>Binghamton</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="406028555712.4249">
+												<label for="406028555712.4249"><span class="square"><span class="fa fa-check check-square"></span></span>Binghamton NY</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="789105123426.8492">
+												<label for="789105123426.8492"><span class="square"><span class="fa fa-check check-square"></span></span>Birmingham AL</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="766974286874.287">
+												<label for="766974286874.287"><span class="square"><span class="fa fa-check check-square"></span></span>Birmingham-Ann-Tusc</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="15233049387.413155">
+												<label for="15233049387.413155"><span class="square"><span class="fa fa-check check-square"></span></span>Bluefield-Beckley-Oak Hill</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="194343407428.93762">
+												<label for="194343407428.93762"><span class="square"><span class="fa fa-check check-square"></span></span>Boise</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="476336509183.1796">
+												<label for="476336509183.1796"><span class="square"><span class="fa fa-check check-square"></span></span>Boise ID</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="398355341331.49066">
+												<label for="398355341331.49066"><span class="square"><span class="fa fa-check check-square"></span></span>Boston MA</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1369890554056.15">
+												<label for="1369890554056.15"><span class="square"><span class="fa fa-check check-square"></span></span>Boston-Manchester</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="86365412547.37535">
+												<label for="86365412547.37535"><span class="square"><span class="fa fa-check check-square"></span></span>Bowling Green KY</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="914342684796.016">
+												<label for="914342684796.016"><span class="square"><span class="fa fa-check check-square"></span></span>Bridgeport CT</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="144368125372.3851">
+												<label for="144368125372.3851"><span class="square"><span class="fa fa-check check-square"></span></span>Bryan-College Station TX</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="296874493652.39844">
+												<label for="296874493652.39844"><span class="square"><span class="fa fa-check check-square"></span></span>Buffalo</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="177994463803.97357">
+												<label for="177994463803.97357"><span class="square"><span class="fa fa-check check-square"></span></span>Buffalo-Niagara Falls NY</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1427665296713.9004">
+												<label for="1427665296713.9004"><span class="square"><span class="fa fa-check check-square"></span></span>Burlington-Plattsburgh</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1339363479608.8333">
+												<label for="1339363479608.8333"><span class="square"><span class="fa fa-check check-square"></span></span>Burlington-Plattsburgh VT-NY</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="654386055514.764">
+												<label for="654386055514.764"><span class="square"><span class="fa fa-check check-square"></span></span>Canton OH</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1447154255602.709">
+												<label for="1447154255602.709"><span class="square"><span class="fa fa-check check-square"></span></span>Cape Cod MA</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="321381026569.7332">
+												<label for="321381026569.7332"><span class="square"><span class="fa fa-check check-square"></span></span>Cedar Rapids IA</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="856739847643.0581">
+												<label for="856739847643.0581"><span class="square"><span class="fa fa-check check-square"></span></span>Cedar Rapids-Waterloo-Dubuque</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1043035563726.2307">
+												<label for="1043035563726.2307"><span class="square"><span class="fa fa-check check-square"></span></span>Champaign-Sprngfld-Decatur</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1248356955486.9558">
+												<label for="1248356955486.9558"><span class="square"><span class="fa fa-check check-square"></span></span>Charleston</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="361031478910.3893">
+												<label for="361031478910.3893"><span class="square"><span class="fa fa-check check-square"></span></span>Charleston SC</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="796940980944.5588">
+												<label for="796940980944.5588"><span class="square"><span class="fa fa-check check-square"></span></span>Charleston WV</label>
+											</div>
+										</li>
+										<li>
+										<div class="layout">
+												<input type="checkbox" id="823640795700.3713">
+												<label for="823640795700.3713"><span class="square"><span class="fa fa-check check-square"></span></span>Charleston-Huntington</label>
+										</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="902954344218.7495">
+												<label for="902954344218.7495"><span class="square"><span class="fa fa-check check-square"></span></span>Charlotte</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1041296338142.4583">
+												<label for="1041296338142.4583"><span class="square"><span class="fa fa-check check-square"></span></span>Charlotte-Gastonia-Rock Hill NC-SC</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1039052794481.4802">
+												<label for="1039052794481.4802"><span class="square"><span class="fa fa-check check-square"></span></span>Charlottesville</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="467041437454.8512">
+												<label for="467041437454.8512"><span class="square"><span class="fa fa-check check-square"></span></span>Charlottesville VA</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="892676793026.9312">
+												<label for="892676793026.9312"><span class="square"><span class="fa fa-check check-square"></span></span>Chattanooga</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="288619026096.8836">
+												<label for="288619026096.8836"><span class="square"><span class="fa fa-check check-square"></span></span>Chattanooga TN</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="34119504420.584564">
+												<label for="34119504420.584564"><span class="square"><span class="fa fa-check check-square"></span></span>Cheyenne WY</label>
+											</div>
+										</li>
+										<li>
+										<div class="layout">
+											<input type="checkbox" id="188305300122.12622">
+											<label for="188305300122.12622"><span class="square"><span class="fa fa-check check-square"></span></span>Cheyenne-Scottsbluff</label>
+										</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="649063324454.8378">
+												<label for="649063324454.8378"><span class="square"><span class="fa fa-check check-square"></span></span>Cheynne</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1357745346956.6858">
+												<label for="1357745346956.6858"><span class="square"><span class="fa fa-check check-square"></span></span>Chicago</label>
+											</div>
+										</li>
+									</ul>   
+								</div>		
+							</div>		
+						</div>
+						<div class="filter_stations dropdown-checkbox">
+							<svg viewBox="-763 -900 763 900" width="1.5rem" class="img-radio">
+<path d="M379 623c-25 0 -46 21 -46 46s21 46 46 46c26 0 46 -21 46 -46s-20 -46 -46 -46zM641 28c7 -19 -2 -40 -21 -47c-4 -2 -8 -2 -13 -2c-14 0 -28 8 -33 23l-11 28h-182v0v0h-186l-11 -28c-5 -15 -19 -23 -33 -23c-5 0 -9 0 -13 2c-19 7 -28 28 -21 47l222 571l34 23h13 l33 -23zM498 197l-35 89l-57 -57l62 -61zM379 503l-56 -145h112zM449 322h-136l68 -67zM296 289l-35 -89l33 -32l62 61zM209 66h136l-98 97zM381 80l62 62l-62 62l-62 -62zM417 66h132l-37 95zM549 532l-30 29c21 20 32 49 32 76c0 24 -10 51 -29 71l28 28 c26 -29 44 -65 44 -103c0 -35 -14 -71 -45 -101zM656 474l-31 31c35 34 53 80 52 129c1 48 -17 95 -52 130l30 29c45 -44 67 -103 68 -162c-1 -55 -20 -112 -67 -157zM215 739l29 -30c-21 -20 -32 -49 -32 -75s10 -52 29 -71l-28 -28c-27 27 -44 65 -44 102 c0 35 14 71 46 102zM107 797l31 -32c-35 -34 -53 -80 -53 -129c0 -48 18 -94 53 -129l-30 -31c-45 45 -67 104 -68 163c1 55 20 112 67 158z" transform="rotate(180)"></path>
+							</svg>
+						
+							<div class="select dropdown">
+								<a href="#" class="dropdown-checkbox-toggle" data-toggle="dropdown" id="radio_select">
+									<span class="">Filter types of Radio stations<span>
+									<span class="dropdown-checkbox-nbselected"></span>
+									<span class="img-arrow"><i class="fa fa-angle-down"></i></span>
+								</a>
+								<div class="dropdown-checkbox-content">
+									<div class="dropdown-checkbox-header clearfix">        
+										<input class="checkbox-all" type="checkbox" id="231">
+										<label for="231"><span class="square"><span class="fa fa-check check-square"></span></span>Click for National</label>
+										<input type="text" placeholder="Search" class="search">      
+									</div>      
+									<ul class="dropdown-checkbox-menu"> 
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="814770570124.1818">
+												<label for="814770570124.1818"><span class="square"><span class="fa fa-check check-square"></span></span>AC</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="255771252834.55652">
+												<label for="255771252834.55652"><span class="square"><span class="fa fa-check check-square"></span></span>AC (DANCE)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="621752775489.4141">
+												<label for="621752775489.4141"><span class="square"><span class="fa fa-check check-square"></span></span>AC (HOT)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="78011517459.745">
+												<label for="78011517459.745"><span class="square"><span class="fa fa-check check-square"></span></span>AC (HOT)/AOR (AP)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1320678643996.2512">
+												<label for="1320678643996.2512"><span class="square"><span class="fa fa-check check-square"></span></span>AC (HOT)/AOR (CR)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="111800769101.9451">
+												<label for="111800769101.9451"><span class="square"><span class="fa fa-check check-square"></span></span>AC (HOT)/CHR</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="320928814870.6919">
+												<label for="320928814870.6919"><span class="square"><span class="fa fa-check check-square"></span></span>AC (HOT)/GOLD/N/T</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="705353486697.3468">
+												<label for="705353486697.3468"><span class="square"><span class="fa fa-check check-square"></span></span>AC (HOT)/N/T</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="45451221871.13513">
+												<label for="45451221871.13513"><span class="square"><span class="fa fa-check check-square"></span></span>B/U/JAZZ/N/T</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1248097733716.6902">
+												<label for="1248097733716.6902"><span class="square"><span class="fa fa-check check-square"></span></span>SPAN (REGIONAL/GOLD)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout"><input type="checkbox" id="881011823165.1855">
+											<label for="881011823165.1855"><span class="square"><span class="fa fa-check check-square"></span></span>SPAN (REGIONAL/TROPICAL)</label></div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1458787056747.6978">
+												<label for="1458787056747.6978"><span class="square"><span class="fa fa-check check-square"></span></span>SPAN (TROPICAL)</label>
+											</div>
+										</li>
+									</ul>    
+								</div>
+							</div>
+						</div>
+						<div class="filter_channels dropdown-checkbox">
+							<p class="img-tv"><i class="fa fa-television"></i></p>
+							<div class="select dropdown">
+								<a href="#" class="dropdown-checkbox-toggle" id="tv_select">
+									<span class="">Filter types of TV channels<span>
+									<span class="dropdown-checkbox-nbselected"></span>
+									<span class="img-arrow"><i class="fa fa-angle-down"></i></span>
+								</a>
+								<div class="dropdown-checkbox-content" id="content">      
+									<div class="dropdown-checkbox-header clearfix">        
+										<input class="checkbox-all" type="checkbox" id="312">
+										<label for="312"><span class="square"><span class="fa fa-check check-square"></span></span>Click for National</label>
+										<input type="text" placeholder="Search" class="search">      
+									</div>      
+									<ul class="dropdown-checkbox-menu">
+										<li>
+											<div class="layout clearfix">
+												<input type="checkbox" id="2310065642.7462983">
+												<label for="2310065642.7462983"><span class="square"><span class="fa fa-check check-square"></span></span>ABC</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout clearfix">
+												<input type="checkbox" id="894664305072.2946">
+												<label for="894664305072.2946"><span class="square"><span class="fa fa-check check-square"></span></span>CBS</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="872993190020.0084">
+												<label for="872993190020.0084"><span class="square"><span class="fa fa-check check-square"></span></span>CW</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1151853198980.999">
+												<label for="1151853198980.999"><span class="square"><span class="fa fa-check check-square"></span></span>CW/MNT</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="387822321942.27905">
+												<label for="387822321942.27905"><span class="square"><span class="fa fa-check check-square"></span></span>EDU</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="584552977901.4309">
+												<label for="584552977901.4309"><span class="square"><span class="fa fa-check check-square"></span></span>ETH</label>
+											</div>
+										</li>
+										<li>
+										<div class="layout">
+											<input type="checkbox" id="947991473527.6075">
+											<label for="947991473527.6075"><span class="square"><span class="fa fa-check check-square"></span></span>FOX</label>
+										</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="813760215249.8959">
+												<label for="813760215249.8959"><span class="square"><span class="fa fa-check check-square"></span></span>IND</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="230330424563.34967">
+												<label for="230330424563.34967"><span class="square"><span class="fa fa-check check-square"></span></span>IND (ETH)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="995787705107.5723">
+												<label for="995787705107.5723"><span class="square"><span class="fa fa-check check-square"></span></span>IND (ME TV)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="985135593194.2468">
+												<label for="985135593194.2468"><span class="square"><span class="fa fa-check check-square"></span></span>IND (MUSIC VIDEOS)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="760329495801.1519">
+												<label for="760329495801.1519"><span class="square"><span class="fa fa-check check-square"></span></span>IND (REL)/MISC</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="774832819246.3425">
+												<label for="774832819246.3425"><span class="square"><span class="fa fa-check check-square"></span></span>IND/REL</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="792721644493.2418">
+												<label for="792721644493.2418"><span class="square"><span class="fa fa-check check-square"></span></span>ION</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="824085525934.2739">
+												<label for="824085525934.2739"><span class="square"><span class="fa fa-check check-square"></span></span>MNT</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="797060585686.2329">
+												<label for="797060585686.2329"><span class="square"><span class="fa fa-check check-square"></span></span>NBC</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="355630422324.654">
+												<label for="355630422324.654"><span class="square"><span class="fa fa-check check-square"></span></span>PBS</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="157054507487.2359">
+												<label for="157054507487.2359"><span class="square"><span class="fa fa-check check-square"></span></span>REL (DAYSTAR)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1152818412837.7795">
+												<label for="1152818412837.7795"><span class="square"><span class="fa fa-check check-square"></span></span>SPAN (AZTECA)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1133959347877.742">
+												<label for="1133959347877.742"><span class="square"><span class="fa fa-check check-square"></span></span>SPAN (ESTRELLA)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="627438811140.0774">
+												<label for="627438811140.0774"><span class="square"><span class="fa fa-check check-square"></span></span>SPAN (IND)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="558813981924.0963">
+												<label for="558813981924.0963"><span class="square"><span class="fa fa-check check-square"></span></span>SPAN (MEGA TV)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="1328319448393.5369">
+												<label for="1328319448393.5369"><span class="square"><span class="fa fa-check check-square"></span></span>SPAN (TELEFUTURA)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="434558408007.65906">
+												<label for="434558408007.65906"><span class="square"><span class="fa fa-check check-square"></span></span>SPAN (TELEMUNDO)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="47771276591.43924">
+												<label for="47771276591.43924"><span class="square"><span class="fa fa-check check-square"></span></span>SPAN (UNIVISION)</label>
+											</div>
+										</li>
+										<li>
+											<div class="layout">
+												<input type="checkbox" id="969365691789.9303">
+												<label for="969365691789.9303"><span class="square"><span class="fa fa-check check-square"></span></span>TBN (REL)</label>
+											</div>
+										</li>
+									</ul>   
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="line-gradient">
+						<div class="line">
+						</div>
+					</div>
+					<div class="bottom_filters clearfix">
+						<div class="time_frame">
+							<p class="select">Select Time Frame:</p> 
+							<div class="selected_time-shadow">
+								<div class="selected_time clearfix">
+									<a href="#" class="dropdown-toggle-time">
+										<div class="radio-tv">
+											<p style="line-height: 1.25;">
+												<span class="left_option">Radio:</span>
+												<span class="number">6</span><span class="PM">AM</span><span class="number"> - 7</span><span class="PM">PM</span><span class="right_option">Monday - Friday</span> 
+											</p>
+											<p style="line-height: 1.25;">
+												<span class="left_option">TV:</span>
+												<span class="number">6</span><span class="PM">AM</span><span class="number"> - 5</span><span class="PM">PM</span><span class="right_option">Monday - Friday</span> 
+											</p>
+										</div>
+										<div class="vertical_frame">
+										</div>
+										<a href="#" class="img-arrow"><i class="fa fa-angle-down"></i></a>	
+									</a>
+									<ul class="dropdown-menu-time dropdown-menu">
+										<li class="radio-tv-li">
+											<p>
+												<span class="left_option">Radio:</span>&nbsp;<span class="number">6</span><span class="PM">AM</span><span class="number"> - 7</span><span class="PM">PM</span><span class="right_option">Monday - Friday</span> 
+											</p>
+											<p>
+												<span class="left_option">TV:</span>&nbsp;<span class="number">6</span><span class="PM">AM</span><span class="number"> - 5</span><span class="PM">PM</span><span class="right_option">Monday - Friday</span> 
+											</p>
+										</li>
+										<li class="radio-tv-li">
+											<p>
+												<span class="left_option">Radio:</span>&nbsp;<span class="number">7</span><span class="PM">PM</span><span class="number"> - 12</span><span class="PM">AM</span><span class="right_option">Monday - Friday</span> 
+											</p>
+											<p>
+												<span class="left_option">TV:</span>&nbsp;<span class="number">5</span><span class="PM">PM</span><span class="number"> - 12</span><span class="PM">AM</span><span class="right_option">Monday - Friday</span> 
+											</p>
+										</li>
+										<li class="radio-tv-li">
+											<p>
+												<span class="left_option">Radio:</span>&nbsp;<span class="number">12</span><span class="PM">AM</span><span class="number"> - 6</span><span class="PM">AM</span> <span class="right_option">Monday - Friday</span> 
+											</p>
+											<p>
+												<span class="left_option">TV:</span>&nbsp;<span class="number">12</span><span class="PM">AM</span><span class="number"> - 6</span><span class="PM">AM</span> <span class="right_option">Monday - Friday</span> 
+											</p>
+										</li>
+										<li class="radio-tv-li">
+											<p>
+												<span class="left_option">Radio:</span>&nbsp;<span class="number">6</span><span class="PM">AM</span><span class="number"> - 7</span><span class="PM">PM</span> <span class="right_option">Saturday - Sanday</span> 
+											</p>
+											<p>
+												<span class="left_option">TV:</span>&nbsp;<span class="number">6</span><span class="PM">AM</span><span class="number"> - 7</span><span class="PM">PM</span> <span class="right_option">Saturday - Sanday</span> 
+											</p>
+										</li>
+										<li class="radio-tv-li">
+											<p>
+												<span class="left_option">Radio:</span>&nbsp;<span class="number">7</span><span class="PM">PM</span><span class="number"> - 12</span><span class="PM">AM</span> <span class="right_option">Saturday - Sanday</span> 
+											</p>
+											<p>
+												<span class="left_option">TV:</span>&nbsp;<span class="number">5</span><span class="PM">PM</span><span class="number"> - 12</span><span class="PM">AM</span> <span class="right_option">Saturday - Sanday</span> 
+											</p>
+										</li>
+										<li class="radio-tv-li">
+											<p>
+												<span class="left_option">Radio:</span>&nbsp;<span class="number">12</span><span class="PM">AM</span><span class="number"> - 6</span><span class="PM">AM</span><span class="right_option">Saturday - Sanday</span> 
+											</p>
+											<p>
+												<span class="left_option">TV:</span>&nbsp;<span class="number">12</span><span class="PM">AM</span><span class="number"> - 6</span><span class="PM">AM</span><span class="right_option">Saturday - Sanday</span> 
+											</p>
+										</li>
+									</ul>	
+								</div>
+							</div>
+								<p class="note_time">
+									Weekly Fire Sale Auction - Utilizing the "Race Horse" Format<br> 	
+									- Auctions Start Every Monday - CONFIDENTIAL
+								</p>
+						</div>
+						<div class="cpm_auction">
+							<div class="cpm-numbers clearfix">
+								<div class="column-rate">
+									<p class="head_column">CPM Auction<br>
+										Bid Rate
+									</p> 
+									<div class="number_of_rate-shadow">
+										<div class="number_of">
+											<div class="dollar-text clearfix">
+												<p class="dollar">$</p><input class="underline" value="2.80">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="column-day">
+									<p class="head_column">Insert the number of<br>
+									commercials per day
+									</p>
+									<div class="number_of_day-shadow">
+										<div class="number_of">
+											<input type="text" class="underline" value="4">
+										</div>
+									</div>
+								</div>
+								<div class="column-days">
+									<p class="head_column">Insert the number<br>
+									of DAYS per week
+									</p>
+									<div class="number_of_days-shadow">
+										<div class="number_of">
+											<input class="underline" value="4">
+										</div>
+									</div>	
+								</div>						
+								<div class="column-weeks">
+									<p class="head_column">Insert the<br>
+									number of WEEKS
+									</p>
+									<div class="number_of_weeks-shadow">
+										<div class="number_of">
+											<input class="underline" value="4">
+										</div>
+									</div>	
+								</div>
+							</div>
+							<p class="note_cpm">
+								Values in the this fields below can be changed and will auto-populate to all fields below them.<br> 
+								But if you want to change individual fields for individual stations, you can also do this.
+							</p>
+						</div>
+						<div class="length">
+							<p class="header_length">Length of the commercial:</p> 
+							<div class="commercial-shadow">
+								<div href="#" class="commercial clearfix">
+									<a href="#" class="dropdown-toggle-seconds">
+										<p class="left_commercial"><span>15</span> seconds</p> 
+										<div class="vertical_length">
+										</div>
+										<div class="arrow">
+											<p class="img-arrow"><i class="fa fa-angle-down"></i></p>
+										</div>
+									</a>
+									<ul class="dropdown-menu-seconds">
+										<li class="left_commercial-li"><span>15</span> seconds</li>
+										<li class="left_commercial-li"><span>30</span> seconds</li>
+										<li class="left_commercial-li"><span>60</span> seconds</li>
+									</ul>
+								</div>
+							</div>
+							<p class="note_length">
+								<a href="#">Current CPM Stagger Bidding Levels</a><br>  
+								<a href="#">Auction requirements, rider fees, possible deductions & legal</a>
+							</p>
+						</div>
+					</div>	
+				</div>	
+				<div class="logo-column-shadow">
+					<div class="logo-column">
+						<img class="img-logo" src="project/images/logo11.png" alt="logo of Company">
+						<p class="total">Total Bids from all Timeframes:</p> 
+						<p class="summa">$ 2374533.04</p> 
+						<div class="bg-submit">
+							<input class="submit" type="submit" value="Submit to Auction Team for Approval">  
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>	
+	</div>
+	
+	<div class="bg-bottom">
+		<div class="container4K">
+			<div class="header-content clearfix">
+				<div class="header_bottom clearfix">
+					<div class="pages">
+						<ul class="numbers_pages clearfix">
+							<li><a href="#" class="previous-page"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="first-page"><i class="fa fa-angle-left" aria-hidden="true"></i><a></li>	
+							<li><a class="page" href="#">11</a></li>
+							<li><a class="page" href="#">12</a></li>
+							<li><a class="page" href="#">13</a></li>
+							<li><a class="page page-active" href="#">14</a></li>
+							<li><a class="page" href="#">15</a></li>
+							<li><a class="page" href="#">16</a></li>
+							<li><a class="page" href="#">17</a></li>
+							<li><a class="page" href="#">18</a></li>
+							<li><a href="#" class="next-page"><i class="fa fa-angle-right" aria-hidden="true"></i><a></li>
+							<li><a href="#" class="last-page"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+						</ul>
+					</div> 
+					<div class="grand-all clearfix">
+						<div class="left_grand">
+							<p class="grand_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit - <span>In the "Race Horse":</span></p>
+							
+							<p class="description">
+								 Aenean tempus consectetur enim, at blandit mauris fermentum a. Mauris consectetur consectetur massa,in dignissim<br> erat scelerisque vel. 
+								 Mauris porttitor lobortis quam. Donec mollis, enim eget viverra vestibulum, a facilisis sem enim semper.  
+							</p>
+						</div>
+						<p class="right_grand">$ 17321.45</p> 
+					</div>
+					<div class="row-columns">
+						<div class="select-column">
+							<p class="select_stations">Select Stations<br>
+							& Markets for bidding  
+							<span class="sel-bottom">Total Stations selected: 11</span> 
+							</p>
+						</div>
+						<div class="vertical">
+						</div>
+						<div class="nametv-column">
+							<p class="nametv">
+								Name of the TV<br>
+								DMA-Market
+							</p>
+						</div>
+						<div class="vertical">
+						</div>
+						<div class="station-column">
+							<p class="station_name">
+								Station Name
+							</p>
+						</div>
+						<div class="vertical">
+						</div>
+						<div class="type-column">
+							<p class="type_channel">
+								Type Of Channel
+							</p>
+						</div>
+						<div class="vertical">
+						</div>
+						<div class="cpm-column">
+							<p class="bid_rate">
+								CPM Auction<br>
+								Bid Rate
+							</p>
+						</div>
+						<div class="vertical">
+						</div>
+						<div class="commercials-column">
+							<p class="commercials">
+								Insert the number of<br>
+								commercials per day
+							</p>
+						</div>
+						<div class="vertical">
+						</div>
+						<div class="days-column">
+							<p class="days">
+								Insert the number<br>
+								of DAYS per week
+							</p>
+						</div>
+						<div class="vertical">
+						</div>
+						<div class="weeks-column">
+							<p class="weeks">
+								Insert the<br> 
+								number of WEEKS
+							</p>
+						</div>
+						<div class="vertical">
+						</div>
+						<div class="total-column">
+							<p class="total_commercials">
+								Total commercials<br>   
+								offered to each station<br>
+								selected for bidding
+							</p>
+						</div>
+						<div class="vertical">
+						</div>
+						<div class="average-column">
+							<p class="average">
+								The Current AVERAGE<br>
+								Local CPM Pricing in the U.S.<br>
+								is $10 CPM. Reflected Below
+							</p>
+						</div>
+						<div class="vertical">
+						</div>
+						<div class="offer-column">
+							<p class="offer_commercial">
+								Your Auction Offer<br>
+								per Commercial<br>
+								<span class="offer_bottom">(on each station)</span> 
+							</p>
+						</div>
+						<div class="vertical">
+						</div>
+						<div class="wholesale-column">
+							<p class="wholesale">
+								Your Auction Offer for the<br>
+								Bulk Wholesale Package
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+		<div class="container4K">
+			<div class="header-content clearfix">			
+				<div class="content clearfix">
+					<div class="bg-content clearfix">
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+								
+									<input type="checkbox" checked class="check" id="check1">
+									<label for="check1" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Bluefield-Beckley-Oak</div>
+							<div class="col-3">WHLO AM</div>
+							<div class="col-4">FOX</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text clearfix">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check2">
+									<label for="check2" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Akron OH</div>
+							<div class="col-3">WHLO AM</div>
+							<div class="col-4">CTRY</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text clearfix">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check3">
+									<label for="check3" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Bakersfield CA</div>
+							<div class="col-3">AC (HOT)</div>
+							<div class="col-4">CTRY</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check4">
+									<label for="check4" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Amarillo TX</div>
+							<div class="col-3">WHLO AM</div>
+							<div class="col-4">ABC</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check5">
+									<label for="check5" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Baton Rouge LA</div>
+							<div class="col-3">WHLO AM</div>
+							<div class="col-4">CTRY</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check6">
+									<label for="check6" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Charlotte</div>
+							<div class="col-3">SPAN</div>
+							<div class="col-4">CTRY</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+								
+									<input type="checkbox" class="check" id="check1">
+									<label for="check1" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Bluefield-Beckley-Oak</div>
+							<div class="col-3">WHLO AM</div>
+							<div class="col-4">FOX</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text clearfix">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check2">
+									<label for="check2" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Akron OH</div>
+							<div class="col-3">WHLO AM</div>
+							<div class="col-4">CTRY</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text clearfix">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check3">
+									<label for="check3" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Bakersfield CA</div>
+							<div class="col-3">AC (HOT)</div>
+							<div class="col-4">CTRY</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check4">
+									<label for="check4" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Amarillo TX</div>
+							<div class="col-3">WHLO AM</div>
+							<div class="col-4">ABC</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check5">
+									<label for="check5" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Baton Rouge LA</div>
+							<div class="col-3">WHLO AM</div>
+							<div class="col-4">CTRY</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check6">
+									<label for="check6" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Charlotte</div>
+							<div class="col-3">SPAN</div>
+							<div class="col-4">CTRY</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check4">
+									<label for="check4" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Amarillo TX</div>
+							<div class="col-3">WHLO AM</div>
+							<div class="col-4">ABC</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check5">
+									<label for="check5" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Baton Rouge LA</div>
+							<div class="col-3">WHLO AM</div>
+							<div class="col-4">CTRY</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check6">
+									<label for="check6" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Charlotte</div>
+							<div class="col-3">SPAN</div>
+							<div class="col-4">CTRY</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check4">
+									<label for="check4" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Amarillo TX</div>
+							<div class="col-3">WHLO AM</div>
+							<div class="col-4">ABC</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check5">
+									<label for="check5" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Baton Rouge LA</div>
+							<div class="col-3">WHLO AM</div>
+							<div class="col-4">CTRY</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+						<div class="content-row clearfix">
+							<div class="col-1">
+								<div class="inner-col-1">
+									<input type="checkbox" class="check" id="check6">
+									<label for="check6" class="label_check"></label>
+								</div>
+							</div>
+							<div class="col-2">Charlotte</div>
+							<div class="col-3">SPAN</div>
+							<div class="col-4">CTRY</div>
+							<div class="col-5">
+								<div class="inner-col-5">
+									<div class="bottom-dollar-text">
+										<p class="bottom-dollar">$</p><input class="border-inner5" value="2.80">
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<input class="border-inner6" value="4">
+							</div>
+							<div class="col-7">
+								<input class="border-inner7" value="4">
+							</div>
+							<div class="col-8">
+								<div class="inner-col-8">
+									<input class="border-inner8" value="4">
+								</div>
+							</div>
+							<div class="col-9">64</div>
+							<div class="col-10">$  109.80</div>
+							<div class="col-11">$  25.20</div>
+							<div class="col-12">
+								<div class="inner-col-12">$  1953.20</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<div class="footer4K">
+		<div class="top-footer4K"></div>
+		<div class="main-footer4K">
+			<div class="container4K">
+				<div class="inner-footer4K">
+					<a href="#" target="blank" class="demo_video"><span class="fa fa-youtube-play" aria-hidden="true"></span>Watch Our Auction Demo</a>
+					<span class="all_rights">Example Company Service. All rights reserved. 2017</span>
+				</div>
+			</div>
+		</div>	
+	</div>		
+
+<script src="project/js/jquery-3.2.1.min.js"></script>
+<script src="project/js/bootstrap.js"></script>
+<script>
+
+if ($(".content-row:first-child .check:checked")) {
+	$(".content-row:first-child .inner-col-12").addClass("bg-gradient");
+};
+
+
+var x=1;
+$("#tv_select").click(function() {
+	if (x==1) {
+		$(".filter_channels .dropdown-checkbox-content").css("display","block");
+		return x=2;
+	}
+	if (x==2) {
+		$(".filter_channels .dropdown-checkbox-content").css("display","none");
+		return x=1;
+	}
+});
+var y=1;
+$("#radio_select").click(function() {
+	if (y==1) {
+		$(".filter_stations .dropdown-checkbox-content").css("display","block");
+		return y=2;
+	}
+	if (y==2) {
+		$(".filter_stations .dropdown-checkbox-content").css("display","none");
+		return y=1;
+	}
+});
+var z=1;
+$("#market_select").click(function() {
+	if (z==1) {
+		$(".filter_markets .dropdown-checkbox-content").css("display","block");
+		return z=2;
+	}
+	if (z==2) {
+		$(".filter_markets .dropdown-checkbox-content").css("display","none");
+		return z=1;
+	}
+});
+var q=1;
+$("#date_select").click(function() {
+	if (q==1) {
+		$(".ui-widget").css("display","block");
+		return q=2;
+	}
+	if (q==2) {
+		$(".ui-widget").css("display","none");
+		return q=1;
+	}
+});
+var time=1;
+$(".dropdown-toggle-time").click(function() {
+	if (time==1) {
+		$(".dropdown-menu-time").css("display","block");
+		return time=2;
+	}
+	if (time==2) {
+		$(".dropdown-menu-time").css("display","none");
+		return time=1;
+	}
+	
+});
+var second=1;
+$(".dropdown-toggle-seconds").click(function() {
+	if (second==1) {
+		$(".dropdown-menu-seconds").css("display","block");
+		return second=2;
+	}
+	if (second==2) {
+		$(".dropdown-menu-seconds").css("display","none");
+		return second=1;
+	}
+	
+});
+</script>
+
+</body>
+</html>
